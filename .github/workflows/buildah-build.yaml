@@ -8,6 +8,7 @@ jobs:
   job_1:
     name: 'mkdocs build'
     runs-on: ubuntu-latest
+    uses: actions/checkout@v2
     steps:
       - shell: bash
         run: |
