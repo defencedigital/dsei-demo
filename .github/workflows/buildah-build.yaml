@@ -32,6 +32,10 @@ jobs:
         with:
           name: dsei-site
           path: site
+      - name: 'list folders'
+        run: |
+        sudo apt-get -y install tree
+        tree
       - name: 'Build Container'
         id: build-image
         uses:  redhat-actions/buildah-build@v2
