@@ -5,42 +5,14 @@ on:
       - main
 
 jobs:
-  build:
-    name: Build and push image
+  make-site:
+    name: 'mkdocs build'
     runs-on: ubuntu-latest
-
+    uses: actions/checkout@v2
+    uses: actions/setup-python@v2
     steps:
-    - uses: actions/checkout@v2
-
-    - name: Build MKDocs site
-      id: build-site
-      uses: actions/setup-python@v2
       with:
         python-version: 3.x
       run: |
         pip install -r requirements.txt
         mkdocs build
-
-    - name: Build Image
-      id: build-image
-      uses: redhat-actions/buildah-build@v2
-      with:
-        image: my-app
-        tags: latest ${{ github.sha }}
-        dockerfiles: |
-          ./Containerfile
-
-    # Podman Login action (https://github.com/redhat-actions/podman-login) also be used to log in,
-    # in which case 'username' and 'password' can be omitted.
-    - name: Push To quay.io
-      id: push-to-quay
-      uses: redhat-actions/push-to-registry@v2
-      with:
-        image: ${{ steps.build-image.outputs.image }}
-        tags: ${{ steps.build-image.outputs.tags }}
-        registry: quay.io/defencedigital
-        username: ${{ secrets.REGISTRY_USER }}
-        password: ${{ secrets.REGISTRY_PASSWORD }}
-
-    - name: Print image url
-      run: echo "Image pushed to ${{ steps.push-to-quay.outputs.registry-paths }}"
