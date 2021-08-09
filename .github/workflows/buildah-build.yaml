@@ -14,3 +14,8 @@ jobs:
         run: |
           pip install -r requirements.txt
           mkdocs build
+      - name: 'upload site'
+        uses: actions/upload-artifact@v2
+        with:
+          name: site-contents
+          path: site
