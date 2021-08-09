@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: 'mkdocs build'
         uses: actions/checkout@v2
-        run: |
+      - run: |
           pip install -r requirements.txt
           mkdocs build
       - name: 'upload site'
