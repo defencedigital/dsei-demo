@@ -6,10 +6,10 @@ on:
 
 jobs:
   job_1:
-    name: 'mkdocs build'
     runs-on: ubuntu-latest
     steps:
-      uses: actions/checkout@v2
+      - name: 'mkdocs build'
+        uses: actions/checkout@v2
       - shell: bash
         run: |
           pip install -r requirements.txt
