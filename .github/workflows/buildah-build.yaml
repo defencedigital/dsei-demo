@@ -17,8 +17,9 @@ jobs:
       id: build-site
       with:
         python-version: 3.x
-      run: pip install mkdocs-material
-      run: mkdocs build
+      run: |
+        pip install -r requirements.txt
+        mkdocs build
 
     - name: Build Image
       id: build-image
