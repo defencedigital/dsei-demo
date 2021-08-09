@@ -6,16 +6,27 @@ on:
 
 jobs:
   job_1:
+    name: 'MKDocs Build'
     runs-on: ubuntu-latest
     steps:
       - name: 'mkdocs build'
         uses: actions/checkout@v2
       - shell: bash
-        run: |
-          pip install -r requirements.txt
-          mkdocs build
+        run: pip install -r requirements.txt
+        run: mkdocs build
       - name: 'upload site'
         uses: actions/upload-artifact@v2
         with:
-          name: site-contents
+          name: dsei-site
           path: site
+
+  job_2:
+    name: 'Create Container'
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'checkout'
+        uses: actions/checkout@v2
+      - name: 'download artifact'
+        uses: actions/download-artifact@v2
+        with:
+          name: dsei-site
