@@ -9,10 +9,10 @@ jobs:
     name: 'MKDocs Build'
     runs-on: ubuntu-latest
     steps:
-      - name: 'mkdocs build'
+      - name: 'pip setup'
         uses: actions/checkout@v2
-      - shell: bash
         run: pip install -r requirements.txt
+      - name: 'mkdocs build'
         run: mkdocs build
       - name: 'upload site'
         uses: actions/upload-artifact@v2
