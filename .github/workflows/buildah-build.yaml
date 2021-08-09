@@ -32,10 +32,6 @@ jobs:
         with:
           name: dsei-site
           path: site
-      - name: 'list folders'
-        run: |
-          sudo apt-get -y install tree
-          tree
       - name: 'Build Container'
         id: build-image
         uses:  redhat-actions/buildah-build@v2
@@ -53,6 +49,3 @@ jobs:
           registry: quay.io/defencedigital
           username: ${{ secrets.REGISTRY_USER }}
           password: ${{ secrets.REGISTRY_PASSWORD }}
-
-      - name: Print image url
-        run: echo "Image pushed to ${{ steps.push-to-quay.outputs.registry-paths }}"

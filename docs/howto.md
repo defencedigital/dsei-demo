@@ -15,12 +15,23 @@ nav:
 theme:
   name: material
   palette:
-    scheme: default
-    primary: deep purple
-    accent: deep orange
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      accent: deep orange
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: deep orange
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+
 ```
 
-### Use GH Pages to host the original site
 Git Hub Pages using Actions
 ```
 name: 'GitHub Pages'
@@ -77,10 +88,6 @@ jobs:
         with:
           name: dsei-site
           path: site
-      - name: 'list folders'
-        run: |
-          sudo apt-get -y install tree
-          tree
       - name: 'Build Container'
         id: build-image
         uses:  redhat-actions/buildah-build@v2
@@ -98,7 +105,8 @@ jobs:
           registry: quay.io/defencedigital
           username: ${{ secrets.REGISTRY_USER }}
           password: ${{ secrets.REGISTRY_PASSWORD }}
-
-      - name: Print image url
-        run: echo "Image pushed to ${{ steps.push-to-quay.outputs.registry-paths }}"
 ```
+
+## Run the container
+- Setup a single node k8s server and use gitops
+- setup a public server 
