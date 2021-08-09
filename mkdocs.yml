@@ -1,0 +1,14 @@
+site_name: DSEI 21 Demo
+site_description: 'DSEI 21 Demo'
+site_author: 'Defence Digital Foundry'
+docs_dir: docs/
+repo_name: 'defencedigital/dsei-demo'
+repo_url: 'https://github.com/defencedigital/dsei-demo'
+nav:
+    - Home: index.md
+theme:
+  name: material
+  palette:
+    scheme: default
+    primary: deep purple
+    accent: deep orange
