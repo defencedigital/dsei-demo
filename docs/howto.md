@@ -42,3 +42,63 @@ jobs:
 
 ## Create a container
 Also create a container with the site contents using actions and push to quay.io container registry.
+```
+name: 'Build and Push Image'
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  job_1:
+    name: 'MKDocs Build'
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'mkdocs build'
+        uses: actions/checkout@v2
+      - run: |
+          pip install -r requirements.txt
+          mkdocs build
+      - name: 'upload site'
+        uses: actions/upload-artifact@v2
+        with:
+          name: dsei-site
+          path: site
+
+  job_2:
+    name: 'Create Container'
+    needs: job_1
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'checkout'
+        uses: actions/checkout@v2
+      - name: 'download artifact'
+        uses: actions/download-artifact@v2
+        with:
+          name: dsei-site
+          path: site
+      - name: 'list folders'
+        run: |
+          sudo apt-get -y install tree
+          tree
+      - name: 'Build Container'
+        id: build-image
+        uses:  redhat-actions/buildah-build@v2
+        with:
+          image: dsei-demo
+          tags: latest ${{ github.sha }}
+          dockerfiles: |
+            ./Containerfile
+      - name: Push To quay.io
+        id: push-to-quay
+        uses: redhat-actions/push-to-registry@v2
+        with:
+          image: ${{ steps.build-image.outputs.image }}
+          tags: ${{ steps.build-image.outputs.tags }}
+          registry: quay.io/defencedigital
+          username: ${{ secrets.REGISTRY_USER }}
+          password: ${{ secrets.REGISTRY_PASSWORD }}
+
+      - name: Print image url
+        run: echo "Image pushed to ${{ steps.push-to-quay.outputs.registry-paths }}"
+```
