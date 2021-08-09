@@ -32,4 +32,10 @@ jobs:
         with:
           name: dsei-site
           path: site
-      - run: ls -last
+      - name: 'Build Container'
+        uses:  redhat-actions/buildah-build@v2
+        with:
+          image: dsei-demo
+          tags: latest ${{ github.sha }}
+          dockerfiles: |
+            ./Containerfile
