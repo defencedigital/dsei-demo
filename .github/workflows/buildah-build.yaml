@@ -1,4 +1,4 @@
-name: Build and Push Image
+name: 'Build and Push Image'
 on:
   push:
     branches:
@@ -11,10 +11,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - uses: actions/setup-python@v2
 
     - name: Build MKDocs site
       id: build-site
-      uses: actions/setup-python@v2
       with:
         python-version: 3.x
       run: pip install mkdocs-material
