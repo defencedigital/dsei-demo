@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_5d84f907b2d14aa4862714abd9a9df85 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_5d84f907b2d14aa4862714abd9a9df85" ></div>
+        
+</body>
+<script>    
+    
+            var map_5d84f907b2d14aa4862714abd9a9df85 = L.map(
+                "map_5d84f907b2d14aa4862714abd9a9df85",
+                {
+                    center: [51.502124, -0.117457],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 14,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_b5fc686a38274555a9282965c260a789 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_5d84f907b2d14aa4862714abd9a9df85);
+        
+    
+            var marker_93f80b02b41f4e498f3f9613f1f93b78 = L.marker(
+                [51.5032, -0.12691],
+                {}
+            ).addTo(map_5d84f907b2d14aa4862714abd9a9df85);
+        
+    
+        var popup_ab656665959141f1a121181e10ba939a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8774b3ca30574437aaf7e02d52d484e7 = $(`<div id="html_8774b3ca30574437aaf7e02d52d484e7" style="width: 100.0%; height: 100.0%;"><strong>Friendly tank</strong><br />Type: Challenger 2</div>`)[0];
+            popup_ab656665959141f1a121181e10ba939a.setContent(html_8774b3ca30574437aaf7e02d52d484e7);
+        
+
+        marker_93f80b02b41f4e498f3f9613f1f93b78.bindPopup(popup_ab656665959141f1a121181e10ba939a)
+        ;
+
+        
+    
+    
+            marker_93f80b02b41f4e498f3f9613f1f93b78.bindTooltip(
+                `<div>
+                     Click for info!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6f544013ed694d1b891da2b8596f6b41 = L.marker(
+                [51.50222, -0.12752],
+                {}
+            ).addTo(map_5d84f907b2d14aa4862714abd9a9df85);
+        
+    
+        var popup_33f48eaf76f449c9ae0682ceec38d6cc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_39abcd97f8894582a9ddbd847370b9d3 = $(`<div id="html_39abcd97f8894582a9ddbd847370b9d3" style="width: 100.0%; height: 100.0%;"><strong>Friendly tank</strong><br />Type: Challenger 2</div>`)[0];
+            popup_33f48eaf76f449c9ae0682ceec38d6cc.setContent(html_39abcd97f8894582a9ddbd847370b9d3);
+        
+
+        marker_6f544013ed694d1b891da2b8596f6b41.bindPopup(popup_33f48eaf76f449c9ae0682ceec38d6cc)
+        ;
+
+        
+    
+    
+            marker_6f544013ed694d1b891da2b8596f6b41.bindTooltip(
+                `<div>
+                     Click for info!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7b9b9a8966564aa6a8faaf79d4310c18 = L.marker(
+                [51.50172, -0.12615],
+                {}
+            ).addTo(map_5d84f907b2d14aa4862714abd9a9df85);
+        
+    
+        var popup_53fd111293a44014b0cbcc554d74c5c3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2159a213658749dc9f142e22a28c53d6 = $(`<div id="html_2159a213658749dc9f142e22a28c53d6" style="width: 100.0%; height: 100.0%;"><strong>Friendly tank</strong><br />Type: Challenger 2</div>`)[0];
+            popup_53fd111293a44014b0cbcc554d74c5c3.setContent(html_2159a213658749dc9f142e22a28c53d6);
+        
+
+        marker_7b9b9a8966564aa6a8faaf79d4310c18.bindPopup(popup_53fd111293a44014b0cbcc554d74c5c3)
+        ;
+
+        
+    
+    
+            marker_7b9b9a8966564aa6a8faaf79d4310c18.bindTooltip(
+                `<div>
+                     Click for info!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2e459c310b694390a77f571914e73d3d = L.marker(
+                [51.500958, -0.124205],
+                {}
+            ).addTo(map_5d84f907b2d14aa4862714abd9a9df85);
+        
+    
+        var popup_785f647486544b1aaaecc6f38eb1f3b2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4e605453faf04c44bf724488e0364c11 = $(`<div id="html_4e605453faf04c44bf724488e0364c11" style="width: 100.0%; height: 100.0%;"><strong>Friendly jet</strong><br />Type: Typhoon FGR4</div>`)[0];
+            popup_785f647486544b1aaaecc6f38eb1f3b2.setContent(html_4e605453faf04c44bf724488e0364c11);
+        
+
+        marker_2e459c310b694390a77f571914e73d3d.bindPopup(popup_785f647486544b1aaaecc6f38eb1f3b2)
+        ;
+
+        
+    
+    
+            marker_2e459c310b694390a77f571914e73d3d.bindTooltip(
+                `<div>
+                     Click for info!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_be8d930a2f2f4665805910bc3ec47db8 = L.marker(
+                [51.506698, -0.122803],
+                {}
+            ).addTo(map_5d84f907b2d14aa4862714abd9a9df85);
+        
+    
+        var popup_7e9aa310c7c04200a2aa1faec2f11d14 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_edca4813e106464b8ce7272e88237401 = $(`<div id="html_edca4813e106464b8ce7272e88237401" style="width: 100.0%; height: 100.0%;"><strong>Friendly jet</strong><br />Type: Typhoon FGR4</div>`)[0];
+            popup_7e9aa310c7c04200a2aa1faec2f11d14.setContent(html_edca4813e106464b8ce7272e88237401);
+        
+
+        marker_be8d930a2f2f4665805910bc3ec47db8.bindPopup(popup_7e9aa310c7c04200a2aa1faec2f11d14)
+        ;
+
+        
+    
+    
+            marker_be8d930a2f2f4665805910bc3ec47db8.bindTooltip(
+                `<div>
+                     Click for info!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9151ee2be73d4f58a9207700a39604c5 = L.marker(
+                [51.50325, -0.1334],
+                {}
+            ).addTo(map_5d84f907b2d14aa4862714abd9a9df85);
+        
+    
+        var popup_65de467703c74e69b67169a15d6a3281 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0648689e86ab4cab9ff1e9735b4ef9b8 = $(`<div id="html_0648689e86ab4cab9ff1e9735b4ef9b8" style="width: 100.0%; height: 100.0%;"><strong>Friendly troops</strong><br />Type: Light infantry</div>`)[0];
+            popup_65de467703c74e69b67169a15d6a3281.setContent(html_0648689e86ab4cab9ff1e9735b4ef9b8);
+        
+
+        marker_9151ee2be73d4f58a9207700a39604c5.bindPopup(popup_65de467703c74e69b67169a15d6a3281)
+        ;
+
+        
+    
+    
+            marker_9151ee2be73d4f58a9207700a39604c5.bindTooltip(
+                `<div>
+                     Click for info!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_816477d9a36e4d86961f2ce140242690 = L.marker(
+                [51.500627, -0.12684],
+                {}
+            ).addTo(map_5d84f907b2d14aa4862714abd9a9df85);
+        
+    
+        var popup_34685744e5744cc2a8117126fa30d026 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_66373785af1742cfa539a912b655e442 = $(`<div id="html_66373785af1742cfa539a912b655e442" style="width: 100.0%; height: 100.0%;"><strong>Friendly troops</strong><br />Type: Light infantry</div>`)[0];
+            popup_34685744e5744cc2a8117126fa30d026.setContent(html_66373785af1742cfa539a912b655e442);
+        
+
+        marker_816477d9a36e4d86961f2ce140242690.bindPopup(popup_34685744e5744cc2a8117126fa30d026)
+        ;
+
+        
+    
+    
+            marker_816477d9a36e4d86961f2ce140242690.bindTooltip(
+                `<div>
+                     Click for info!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_56a91f09a0b84bbe8a3bf9ebd18c64ed = L.marker(
+                [51.500785, -0.118805],
+                {}
+            ).addTo(map_5d84f907b2d14aa4862714abd9a9df85);
+        
+    
+        var popup_fb7803e781a24e42b30b1c4666788afe = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bae2e3e0e33e4ccbaf8db3568dc11f35 = $(`<div id="html_bae2e3e0e33e4ccbaf8db3568dc11f35" style="width: 100.0%; height: 100.0%;"><strong>Enemy tank</strong><br />Type: T-14 Armata</div>`)[0];
+            popup_fb7803e781a24e42b30b1c4666788afe.setContent(html_bae2e3e0e33e4ccbaf8db3568dc11f35);
+        
+
+        marker_56a91f09a0b84bbe8a3bf9ebd18c64ed.bindPopup(popup_fb7803e781a24e42b30b1c4666788afe)
+        ;
+
+        
+    
+    
+            marker_56a91f09a0b84bbe8a3bf9ebd18c64ed.bindTooltip(
+                `<div>
+                     Click for info!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2f2c01be1770420c9cfc1cf1a3756f02 = L.marker(
+                [51.502349, -0.116394],
+                {}
+            ).addTo(map_5d84f907b2d14aa4862714abd9a9df85);
+        
+    
+        var popup_bdece9a893084f0494556a93e1ae7b11 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d7ca949cb8a64f3999ab15dc7f356a1a = $(`<div id="html_d7ca949cb8a64f3999ab15dc7f356a1a" style="width: 100.0%; height: 100.0%;"><strong>Enemy tank</strong><br />Type: T-14 Armata</div>`)[0];
+            popup_bdece9a893084f0494556a93e1ae7b11.setContent(html_d7ca949cb8a64f3999ab15dc7f356a1a);
+        
+
+        marker_2f2c01be1770420c9cfc1cf1a3756f02.bindPopup(popup_bdece9a893084f0494556a93e1ae7b11)
+        ;
+
+        
+    
+    
+            marker_2f2c01be1770420c9cfc1cf1a3756f02.bindTooltip(
+                `<div>
+                     Click for info!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_cdde0025fc8241ba9714b459a5d630b3 = L.marker(
+                [51.498493, -0.117331],
+                {}
+            ).addTo(map_5d84f907b2d14aa4862714abd9a9df85);
+        
+    
+        var popup_293ca442d6aa4f4da4b7c340d6362835 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7323a8243898485e9c3295fb278d9694 = $(`<div id="html_7323a8243898485e9c3295fb278d9694" style="width: 100.0%; height: 100.0%;"><strong>Enemy tank</strong><br />Type: T-14 Armata</div>`)[0];
+            popup_293ca442d6aa4f4da4b7c340d6362835.setContent(html_7323a8243898485e9c3295fb278d9694);
+        
+
+        marker_cdde0025fc8241ba9714b459a5d630b3.bindPopup(popup_293ca442d6aa4f4da4b7c340d6362835)
+        ;
+
+        
+    
+    
+            marker_cdde0025fc8241ba9714b459a5d630b3.bindTooltip(
+                `<div>
+                     Click for info!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1934c33800c04c5f8de79b5bebf0b5b4 = L.marker(
+                [51.496663, -0.108802],
+                {}
+            ).addTo(map_5d84f907b2d14aa4862714abd9a9df85);
+        
+    
+        var popup_cf44800ff3774bda9ba0b9f4074764a7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d58696c0499c4627958ee2c4ac993b02 = $(`<div id="html_d58696c0499c4627958ee2c4ac993b02" style="width: 100.0%; height: 100.0%;"><strong>Enemy jet</strong><br />Type: Sukhoi Su-57</div>`)[0];
+            popup_cf44800ff3774bda9ba0b9f4074764a7.setContent(html_d58696c0499c4627958ee2c4ac993b02);
+        
+
+        marker_1934c33800c04c5f8de79b5bebf0b5b4.bindPopup(popup_cf44800ff3774bda9ba0b9f4074764a7)
+        ;
+
+        
+    
+    
+            marker_1934c33800c04c5f8de79b5bebf0b5b4.bindTooltip(
+                `<div>
+                     Click for info!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_88da6039e26e4acca6863bfc6289ae6c = L.marker(
+                [51.503625, -0.105697],
+                {}
+            ).addTo(map_5d84f907b2d14aa4862714abd9a9df85);
+        
+    
+        var popup_5d109ab159394b799a0a67bcbee548af = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cd4c81cf453c46f7aae1e7a19cb1bb19 = $(`<div id="html_cd4c81cf453c46f7aae1e7a19cb1bb19" style="width: 100.0%; height: 100.0%;"><strong>Enemy jet</strong><br />Type: Sukhoi Su-57</div>`)[0];
+            popup_5d109ab159394b799a0a67bcbee548af.setContent(html_cd4c81cf453c46f7aae1e7a19cb1bb19);
+        
+
+        marker_88da6039e26e4acca6863bfc6289ae6c.bindPopup(popup_5d109ab159394b799a0a67bcbee548af)
+        ;
+
+        
+    
+    
+            marker_88da6039e26e4acca6863bfc6289ae6c.bindTooltip(
+                `<div>
+                     Click for info!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_59f04c1c9f9e41b1a4f8b3847c8bc1fb = L.marker(
+                [51.494361, -0.121365],
+                {}
+            ).addTo(map_5d84f907b2d14aa4862714abd9a9df85);
+        
+    
+        var popup_4eeb6f2692c44a7aa97d978733f6cd18 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4119985a426d4e77aacf4333a88bd26a = $(`<div id="html_4119985a426d4e77aacf4333a88bd26a" style="width: 100.0%; height: 100.0%;"><strong>Enemy troops</strong><br />Type: Light infantry</div>`)[0];
+            popup_4eeb6f2692c44a7aa97d978733f6cd18.setContent(html_4119985a426d4e77aacf4333a88bd26a);
+        
+
+        marker_59f04c1c9f9e41b1a4f8b3847c8bc1fb.bindPopup(popup_4eeb6f2692c44a7aa97d978733f6cd18)
+        ;
+
+        
+    
+    
+            marker_59f04c1c9f9e41b1a4f8b3847c8bc1fb.bindTooltip(
+                `<div>
+                     Click for info!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3e94c13e4f1944e8b5517625ae294846 = L.marker(
+                [51.495117, -0.100385],
+                {}
+            ).addTo(map_5d84f907b2d14aa4862714abd9a9df85);
+        
+    
+        var popup_83f463a010a8487e89522c3a50860113 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e94786c6613b4de2abddc2a36d02ba23 = $(`<div id="html_e94786c6613b4de2abddc2a36d02ba23" style="width: 100.0%; height: 100.0%;"><strong>Enemy troops</strong><br />Type: Light infantry</div>`)[0];
+            popup_83f463a010a8487e89522c3a50860113.setContent(html_e94786c6613b4de2abddc2a36d02ba23);
+        
+
+        marker_3e94c13e4f1944e8b5517625ae294846.bindPopup(popup_83f463a010a8487e89522c3a50860113)
+        ;
+
+        
+    
+    
+            marker_3e94c13e4f1944e8b5517625ae294846.bindTooltip(
+                `<div>
+                     Click for info!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
