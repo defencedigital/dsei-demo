@@ -58,35 +58,35 @@ folium.Marker(
 # Westminster Bridge East
 folium.Marker(
     [51.500785, -0.118805], 
-    popup=folium.Popup(html='<strong>Enemy tank</strong><br />Type: T-14 Armata', max_width=200), 
+    popup=folium.Popup(html='<strong>Enemy tank</strong><br />Type: T-ank 42', max_width=200), 
     tooltip=tooltip
 ).add_to(m)
 
 # Waterloo Station Car Park
 folium.Marker(
     [51.502349, -0.116394], 
-    popup=folium.Popup(html='<strong>Enemy tank</strong><br />Type: T-14 Armata', max_width=200), 
+    popup=folium.Popup(html='<strong>Enemy tank</strong><br />Type: T-ank 42', max_width=200), 
     tooltip=tooltip
 ).add_to(m)
 
 # St Thomas' Hospital
 folium.Marker(
     [51.498493, -0.117331], 
-    popup=folium.Popup(html='<strong>Enemy tank</strong><br />Type: T-14 Armata', max_width=200), 
+    popup=folium.Popup(html='<strong>Enemy tank</strong><br />Type: T-ank 42', max_width=200), 
     tooltip=tooltip
 ).add_to(m)
 
 # Imperial War Museum
 folium.Marker(
     [51.496663, -0.108802], 
-    popup=folium.Popup(html='<strong>Enemy jet</strong><br />Type: Sukhoi Su-57', max_width=200), 
+    popup=folium.Popup(html='<strong>Enemy jet</strong><br />Type: Mig-ht BBAD', max_width=200), 
     tooltip=tooltip
 ).add_to(m)
 
 # Southwark Station
 folium.Marker(
     [51.503625, -0.105697], 
-    popup=folium.Popup(html='<strong>Enemy jet</strong><br />Type: Sukhoi Su-57', max_width=200), 
+    popup=folium.Popup(html='<strong>Enemy jet</strong><br />Type: Mig-ht BBAD', max_width=200), 
     tooltip=tooltip
 ).add_to(m)
 
@@ -105,6 +105,3 @@ folium.Marker(
 ).add_to(m)
 
 m.save('templates/map.html')
-
-
-# Custom markers (tank, etc.)
